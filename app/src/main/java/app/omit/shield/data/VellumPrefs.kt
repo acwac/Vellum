@@ -226,6 +226,12 @@ object VellumPrefs {
         }
     }
 
+    fun setHomeShieldEnabled(enabled: Boolean) {
+        homeShieldEnabled = enabled
+        prefs.edit().putBoolean("home_shield_enabled", enabled).apply()
+        notifyChanged()
+    }
+
     fun setEngineToggle(key: String, value: Boolean) {
         when (key) {
             "cname_uncloak" -> cnameUncloak = value

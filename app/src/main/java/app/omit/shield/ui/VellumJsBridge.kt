@@ -420,7 +420,7 @@ class VellumJsBridge(
 
     @JavascriptInterface
     fun setHomeShieldEnabled(enabled: Boolean) {
-        VellumPrefs.homeShieldEnabled = enabled
+        VellumPrefs.setHomeShieldEnabled(enabled)
         if (enabled) {
             app.omit.shield.net.HomeShieldServer.start(null)
             reloadVpnIfRunning()
