@@ -114,6 +114,7 @@ object VellumPrefs {
             customDohUrl = prefs.getString("custom_doh_url", "https://dns.google/dns-query") ?: "https://dns.google/dns-query"
 
             cnameUncloak = prefs.getBoolean("cname_uncloak", true)
+            homeShieldEnabled = prefs.getBoolean("home_shield_enabled", false)
             antiStormTtl = prefs.getBoolean("anti_storm_ttl", true)
             blockDohCanary = prefs.getBoolean("block_doh_canary", true)
             captivePortalFallback = prefs.getBoolean("captive_portal_fallback", true)
